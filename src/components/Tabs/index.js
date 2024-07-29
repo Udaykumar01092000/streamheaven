@@ -1,4 +1,4 @@
-import React , {act, useState} from 'react'
+import React , {useState} from 'react'
 import Tabs from './tabs'
 import { tabLevels } from './constant'
 
