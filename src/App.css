@@ -2,3 +2,12 @@
   margin: 0;
   padding: 0;
 }
+.App{
+  background-color: #111;
+}
+@media screen and (max-width: 387px) {
+  *{
+    /* margin-right: -69px !important; */
+    padding: 0;
+  }
+}

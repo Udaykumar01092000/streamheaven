@@ -1,0 +1,18 @@
+.scroll-to-top{
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    animation: fadeIn 700ms ease-in-out 1s both;
+    cursor: pointer;
+}
+.custom-size {
+    font-size: 2.4em; /* Adjust the scaling factor as needed */
+}
+.back-top-container{
+    height: 40px;
+    text-align: center;
+    width: 1470px;
+    background-color: #37475a;
+    color: #ffffff;
+    margin-right: 15px;
+}
