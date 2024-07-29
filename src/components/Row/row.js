@@ -14,13 +14,13 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 
   useEffect(() => {
     const url = `${process.env.REACT_APP_API}${fetchUrl}`;
-    console.log("Full API URL:", url); // Add this line
+    console.log("Full API URL:", url); // Log the full API URL
     axios.get(url)
       .then((res) => {
         setMovies(res.data.results);
       })
       .catch((error) => {
-        console.error("Error fetching data:", error); // Add this line
+        console.error("Error fetching data:", error); // Log the error details
         if (error.response && error.response.status === 404) {
           alert("The requested resource was not found.");
         }
@@ -47,8 +47,6 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 
     return () => clearInterval(scrollInterval);
   }, [movies]);
-
-  console.log(movies);
 
   const handleClick = (movie) => {
     if (trailerUrl) {
@@ -90,7 +88,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
       </div>
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
     </div>
-  )
+  );
 }
 
 export default Row;
