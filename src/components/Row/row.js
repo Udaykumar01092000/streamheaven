@@ -24,7 +24,7 @@ const Row = ({title , fetchUrl , isLargeRow}) => {
 
   useEffect(() => {
     const scrollInterval = setInterval(() => {
-      if (rowRef.current) {
+      if (rowRef.current && rowRef.current.firstElementChild) {
         const firstChild = rowRef.current.firstElementChild;
         const cardWidth = firstChild.offsetWidth + parseInt(window.getComputedStyle(firstChild).marginRight, 10);
 
@@ -41,7 +41,7 @@ const Row = ({title , fetchUrl , isLargeRow}) => {
     }, 4000);
 
     return () => clearInterval(scrollInterval);
-  }, []);
+  }, [movies]);
 
 
   console.log(movies);
